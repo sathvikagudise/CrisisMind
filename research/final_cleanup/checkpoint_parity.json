@@ -1,0 +1,349 @@
+{
+  "summary": {
+    "device": "cpu",
+    "n": 12,
+    "checkpoint": "C:\\Users\\sathv\\Downloads\\Creations\\CrisisMind\\backend\\outputs\\checkpoints\\final_exp\\F4_generic_wce_bal_n0.0_s42\\best.pth",
+    "max_dev_class": 0,
+    "max_dev_prob": 7.7e-07,
+    "max_dev_conf": 7.7e-05,
+    "parity_pass": 1
+  },
+  "samples": [
+    {
+      "sample": 3,
+      "path": "data_image/california_wildfires/10_10_2017/917792930315821057_0.jpg",
+      "truth": 2,
+      "cls_A": 2,
+      "cls_B": 2,
+      "dev_class": 0,
+      "prob_A": [
+        0.00061318,
+        3.849e-05,
+        0.99934834
+      ],
+      "prob_B": [
+        0.00061318,
+        3.849e-05,
+        0.99934834
+      ],
+      "conf_A": 99.9348,
+      "conf_B": 99.9348,
+      "dev_prob_max": 0.0,
+      "dev_conf": 0.0,
+      "dev_logit_max": 5e-07,
+      "dev_gate_max": 0.0,
+      "dev_img_feat_max": 2e-06,
+      "dev_txt_feat_max": 0.0,
+      "severity_A": "Severe Damage",
+      "severity_B": "Severe Damage"
+    },
+    {
+      "sample": 6,
+      "path": "data_image/california_wildfires/10_10_2017/917793137925459968_2.jpg",
+      "truth": 2,
+      "cls_A": 2,
+      "cls_B": 2,
+      "dev_class": 0,
+      "prob_A": [
+        0.00231118,
+        0.00095556,
+        0.99673331
+      ],
+      "prob_B": [
+        0.00231116,
+        0.00095555,
+        0.99673331
+      ],
+      "conf_A": 99.6733,
+      "conf_B": 99.6733,
+      "dev_prob_max": 1e-08,
+      "dev_conf": 0.0,
+      "dev_logit_max": 2.9e-06,
+      "dev_gate_max": 0.0,
+      "dev_img_feat_max": 2e-06,
+      "dev_txt_feat_max": 0.0,
+      "severity_A": "Severe Damage",
+      "severity_B": "Severe Damage"
+    },
+    {
+      "sample": 25,
+      "path": "data_image/california_wildfires/10_10_2017/917822041079861248_0.jpg",
+      "truth": 2,
+      "cls_A": 2,
+      "cls_B": 2,
+      "dev_class": 0,
+      "prob_A": [
+        0.0020026,
+        0.00483391,
+        0.99316347
+      ],
+      "prob_B": [
+        0.0020026,
+        0.0048339,
+        0.99316347
+      ],
+      "conf_A": 99.3163,
+      "conf_B": 99.3163,
+      "dev_prob_max": 1e-08,
+      "dev_conf": 0.0,
+      "dev_logit_max": 8e-07,
+      "dev_gate_max": 0.0,
+      "dev_img_feat_max": 3e-06,
+      "dev_txt_feat_max": 0.0,
+      "severity_A": "Severe Damage",
+      "severity_B": "Severe Damage"
+    },
+    {
+      "sample": 27,
+      "path": "data_image/california_wildfires/10_10_2017/917825253694459904_0.jpg",
+      "truth": 2,
+      "cls_A": 2,
+      "cls_B": 2,
+      "dev_class": 0,
+      "prob_A": [
+        0.001506,
+        0.00803202,
+        0.99046201
+      ],
+      "prob_B": [
+        0.001506,
+        0.00803203,
+        0.99046201
+      ],
+      "conf_A": 99.0462,
+      "conf_B": 99.0462,
+      "dev_prob_max": 1e-08,
+      "dev_conf": 0.0,
+      "dev_logit_max": 1.2e-06,
+      "dev_gate_max": 0.0,
+      "dev_img_feat_max": 2e-06,
+      "dev_txt_feat_max": 0.0,
+      "severity_A": "Severe Damage",
+      "severity_B": "Severe Damage"
+    },
+    {
+      "sample": 32,
+      "path": "data_image/california_wildfires/10_10_2017/917829163259592704_0.jpg",
+      "truth": 2,
+      "cls_A": 2,
+      "cls_B": 2,
+      "dev_class": 0,
+      "prob_A": [
+        2.77e-06,
+        4.23e-06,
+        0.99999297
+      ],
+      "prob_B": [
+        2.77e-06,
+        4.23e-06,
+        0.99999297
+      ],
+      "conf_A": 99.9993,
+      "conf_B": 99.9993,
+      "dev_prob_max": 0.0,
+      "dev_conf": 0.0,
+      "dev_logit_max": 1.9e-06,
+      "dev_gate_max": 0.0,
+      "dev_img_feat_max": 2e-06,
+      "dev_txt_feat_max": 0.0,
+      "severity_A": "Severe Damage",
+      "severity_B": "Severe Damage"
+    },
+    {
+      "sample": 41,
+      "path": "data_image/california_wildfires/10_10_2017/917836899410235392_0.jpg",
+      "truth": 2,
+      "cls_A": 2,
+      "cls_B": 2,
+      "dev_class": 0,
+      "prob_A": [
+        0.02053223,
+        0.07703336,
+        0.90243441
+      ],
+      "prob_B": [
+        0.02053232,
+        0.07703378,
+        0.90243393
+      ],
+      "conf_A": 90.2434,
+      "conf_B": 90.2434,
+      "dev_prob_max": 4.8e-07,
+      "dev_conf": 4.8e-05,
+      "dev_logit_max": 3.3e-06,
+      "dev_gate_max": 0.0,
+      "dev_img_feat_max": 2e-06,
+      "dev_txt_feat_max": 0.0,
+      "severity_A": "Severe Damage",
+      "severity_B": "Severe Damage"
+    },
+    {
+      "sample": 42,
+      "path": "data_image/california_wildfires/10_10_2017/917837517562445824_0.jpg",
+      "truth": 2,
+      "cls_A": 2,
+      "cls_B": 2,
+      "dev_class": 0,
+      "prob_A": [
+        9.147e-05,
+        0.00059773,
+        0.99931085
+      ],
+      "prob_B": [
+        9.147e-05,
+        0.00059773,
+        0.99931085
+      ],
+      "conf_A": 99.9311,
+      "conf_B": 99.9311,
+      "dev_prob_max": 0.0,
+      "dev_conf": 0.0,
+      "dev_logit_max": 4.8e-06,
+      "dev_gate_max": 1e-07,
+      "dev_img_feat_max": 3e-06,
+      "dev_txt_feat_max": 0.0,
+      "severity_A": "Severe Damage",
+      "severity_B": "Severe Damage"
+    },
+    {
+      "sample": 51,
+      "path": "data_image/california_wildfires/10_10_2017/917842481575841792_0.jpg",
+      "truth": 2,
+      "cls_A": 2,
+      "cls_B": 2,
+      "dev_class": 0,
+      "prob_A": [
+        0.00606277,
+        0.01860358,
+        0.97533369
+      ],
+      "prob_B": [
+        0.00606275,
+        0.01860356,
+        0.97533369
+      ],
+      "conf_A": 97.5334,
+      "conf_B": 97.5334,
+      "dev_prob_max": 2e-08,
+      "dev_conf": 0.0,
+      "dev_logit_max": 1.5e-06,
+      "dev_gate_max": 0.0,
+      "dev_img_feat_max": 2e-06,
+      "dev_txt_feat_max": 0.0,
+      "severity_A": "Severe Damage",
+      "severity_B": "Severe Damage"
+    },
+    {
+      "sample": 56,
+      "path": "data_image/california_wildfires/10_10_2017/917847260200886275_0.jpg",
+      "truth": 2,
+      "cls_A": 2,
+      "cls_B": 2,
+      "dev_class": 0,
+      "prob_A": [
+        0.00057829,
+        0.00109973,
+        0.99832195
+      ],
+      "prob_B": [
+        0.00057829,
+        0.00109972,
+        0.99832195
+      ],
+      "conf_A": 99.8322,
+      "conf_B": 99.8322,
+      "dev_prob_max": 0.0,
+      "dev_conf": 0.0,
+      "dev_logit_max": 1.9e-06,
+      "dev_gate_max": 1e-07,
+      "dev_img_feat_max": 2e-06,
+      "dev_txt_feat_max": 0.0,
+      "severity_A": "Severe Damage",
+      "severity_B": "Severe Damage"
+    },
+    {
+      "sample": 61,
+      "path": "data_image/california_wildfires/10_10_2017/917855837254770688_0.jpg",
+      "truth": 2,
+      "cls_A": 2,
+      "cls_B": 2,
+      "dev_class": 0,
+      "prob_A": [
+        0.01287493,
+        0.00048336,
+        0.98664165
+      ],
+      "prob_B": [
+        0.01287506,
+        0.00048336,
+        0.98664153
+      ],
+      "conf_A": 98.6642,
+      "conf_B": 98.6642,
+      "dev_prob_max": 1.2e-07,
+      "dev_conf": 1.2e-05,
+      "dev_logit_max": 4.9e-06,
+      "dev_gate_max": 0.0,
+      "dev_img_feat_max": 3e-06,
+      "dev_txt_feat_max": 0.0,
+      "severity_A": "Severe Damage",
+      "severity_B": "Severe Damage"
+    },
+    {
+      "sample": 65,
+      "path": "data_image/california_wildfires/10_10_2017/917858237948424202_0.jpg",
+      "truth": 2,
+      "cls_A": 2,
+      "cls_B": 2,
+      "dev_class": 0,
+      "prob_A": [
+        0.00781313,
+        0.3362895,
+        0.65589738
+      ],
+      "prob_B": [
+        0.00781311,
+        0.33629027,
+        0.6558966
+      ],
+      "conf_A": 65.5897,
+      "conf_B": 65.5897,
+      "dev_prob_max": 7.7e-07,
+      "dev_conf": 7.7e-05,
+      "dev_logit_max": 2.9e-06,
+      "dev_gate_max": 0.0,
+      "dev_img_feat_max": 2e-06,
+      "dev_txt_feat_max": 0.0,
+      "severity_A": "Severe Damage",
+      "severity_B": "Severe Damage"
+    },
+    {
+      "sample": 84,
+      "path": "data_image/california_wildfires/11_10_2017/917926173975474176_0.jpg",
+      "truth": 2,
+      "cls_A": 2,
+      "cls_B": 2,
+      "dev_class": 0,
+      "prob_A": [
+        3.158e-05,
+        0.00030646,
+        0.99966192
+      ],
+      "prob_B": [
+        3.158e-05,
+        0.00030646,
+        0.99966192
+      ],
+      "conf_A": 99.9662,
+      "conf_B": 99.9662,
+      "dev_prob_max": 0.0,
+      "dev_conf": 0.0,
+      "dev_logit_max": 1.4e-06,
+      "dev_gate_max": 0.0,
+      "dev_img_feat_max": 1e-06,
+      "dev_txt_feat_max": 0.0,
+      "severity_A": "Severe Damage",
+      "severity_B": "Severe Damage"
+    }
+  ]
+}

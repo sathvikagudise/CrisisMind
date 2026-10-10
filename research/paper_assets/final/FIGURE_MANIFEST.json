@@ -1,0 +1,196 @@
+{
+  "generated_for": "CrisisMind final IEEE paper",
+  "authoritative_sources": {
+    "final_results": "backend\\outputs\\checkpoints\\final_exp\\FINAL_TEST_RESULTS.json",
+    "ablations": "backend\\outputs\\checkpoints\\final_exp\\ablation_results.json",
+    "seed_runs": "backend\\outputs\\checkpoints\\final_exp\\seed_runs.json",
+    "report": "research\\final_experiment\\FINAL_REPORT.md"
+  },
+  "final_configuration": {
+    "checkpoint": "F4_generic_wce_bal_n0.0_s42",
+    "encoders": "frozen ImageNet EfficientNet-B0 + frozen vanilla DistilBERT",
+    "loss": "weighted cross entropy (inverse frequency)",
+    "sampling": "balanced",
+    "lr": 0.0001,
+    "dropout": 0.2,
+    "head": "softmax",
+    "seed": 42,
+    "test_samples": 436
+  },
+  "figures": [
+    {
+      "filename": "fig1_architecture.png",
+      "exists": true,
+      "format": "PNG",
+      "width_px": 1536,
+      "height_px": 1024,
+      "dpi": null,
+      "sha256": "22a8ac27ee4c544264ef62dc0a5aad220b5c9d5c1a1b95b4f13d5d4852f1d746",
+      "bytes": 1602834
+    },
+    {
+      "filename": "fig2_gated_fusion_v3.png",
+      "exists": true,
+      "format": "PNG",
+      "width_px": 1926,
+      "height_px": 898,
+      "dpi": [
+        299.9994,
+        299.9994
+      ],
+      "sha256": "3bbc118203b9f3e0f460ee36ac8d9c9c7f8a18d1c1b1e43770a20b8f3d38151e",
+      "bytes": 182649
+    },
+    {
+      "filename": "fig3_model_comparison.png",
+      "exists": true,
+      "format": "PNG",
+      "width_px": 1923,
+      "height_px": 877,
+      "dpi": [
+        299.9994,
+        299.9994
+      ],
+      "sha256": "057de693b1a3f9c7a6cdb4db3636878cb8fe83e856a39a290846b72f688cceae",
+      "bytes": 86068
+    },
+    {
+      "filename": "fig4_confusion_matrix.png",
+      "exists": true,
+      "format": "PNG",
+      "width_px": 1515,
+      "height_px": 1188,
+      "dpi": [
+        299.9994,
+        299.9994
+      ],
+      "sha256": "92631bae32aec632955e0f04054a1796b41dd9e6f8e46ac44da0d1d41e3c0913",
+      "bytes": 142532
+    },
+    {
+      "filename": "fig5_gradcam.png",
+      "exists": true,
+      "format": "PNG",
+      "width_px": 2050,
+      "height_px": 1823,
+      "dpi": [
+        299.9994,
+        299.9994
+      ],
+      "sha256": "7f0b60f3524e3b137797838863ca6d993ba736192e3c04eb107cc3a15c95472e",
+      "bytes": 1343730
+    },
+    {
+      "filename": "fig6_final_metrics.png",
+      "exists": true,
+      "format": "PNG",
+      "width_px": 1258,
+      "height_px": 841,
+      "dpi": [
+        299.9994,
+        299.9994
+      ],
+      "sha256": "11a29c8627e736e0edfb1998ebadf6b9ee723a8b48795e577ac54814ecfa6626",
+      "bytes": 63556
+    },
+    {
+      "filename": "fig7_classwise_metrics.png",
+      "exists": true,
+      "format": "PNG",
+      "width_px": 1280,
+      "height_px": 807,
+      "dpi": [
+        299.9994,
+        299.9994
+      ],
+      "sha256": "c88a83fdf90f57adb9aef9db9719f097080b32dee52e01f8adaa7fe12ac8fe89",
+      "bytes": 52128
+    }
+  ],
+  "vector_companions": {
+    "fig1_architecture": {
+      "pdf": false,
+      "svg": false
+    },
+    "fig2_gated_fusion_v3": {
+      "pdf": true,
+      "svg": true
+    },
+    "fig3_model_comparison": {
+      "pdf": true,
+      "svg": true
+    },
+    "fig4_confusion_matrix": {
+      "pdf": true,
+      "svg": true
+    },
+    "fig5_gradcam": {
+      "pdf": true,
+      "svg": true
+    },
+    "fig6_final_metrics": {
+      "pdf": true,
+      "svg": true
+    },
+    "fig7_classwise_metrics": {
+      "pdf": true,
+      "svg": true
+    }
+  },
+  "value_checks": [
+    {
+      "check": "fig3 vs expected ablation values",
+      "passed": true
+    },
+    {
+      "check": "fig4 CM == [[24,19,18],[11,37,51],[8,26,242]] and n=436",
+      "passed": true
+    },
+    {
+      "check": "fig6 five metrics match FINAL_REPORT.md",
+      "passed": true
+    },
+    {
+      "check": "fig7 classwise P/R/F1 match FINAL_REPORT.md",
+      "passed": true
+    },
+    {
+      "check": "fig1 is byte-identical copy of approved architecture figure",
+      "passed": true
+    },
+    {
+      "check": "no old-experiment constants in generator scripts",
+      "passed": true
+    }
+  ],
+  "stale_constant_scan": {},
+  "gradcam_selections": [
+    {
+      "true_class": "Little/No Damage",
+      "predicted_class": "Little/No Damage",
+      "confidence_pct": 100.0,
+      "image_path": "data_image/hurricane_harvey/27_8_2017/901688029521334272_2.jpg",
+      "test_row_index": 53,
+      "target_layer": "EfficientNet-B0.features.8 (Conv2d)",
+      "checkpoint": "final_exp/F4_generic_wce_bal_n0.0_s42/best.pth"
+    },
+    {
+      "true_class": "Mild Damage",
+      "predicted_class": "Mild Damage",
+      "confidence_pct": 94.06,
+      "image_path": "data_image/hurricane_harvey/27_8_2017/901650894151979008_0.jpg",
+      "test_row_index": 50,
+      "target_layer": "EfficientNet-B0.features.8 (Conv2d)",
+      "checkpoint": "final_exp/F4_generic_wce_bal_n0.0_s42/best.pth"
+    },
+    {
+      "true_class": "Severe Damage",
+      "predicted_class": "Severe Damage",
+      "confidence_pct": 99.93,
+      "image_path": "data_image/california_wildfires/10_10_2017/917792930315821057_0.jpg",
+      "test_row_index": 0,
+      "target_layer": "EfficientNet-B0.features.8 (Conv2d)",
+      "checkpoint": "final_exp/F4_generic_wce_bal_n0.0_s42/best.pth"
+    }
+  ]
+}

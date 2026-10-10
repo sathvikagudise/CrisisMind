@@ -1,0 +1,76 @@
+{
+  "total_annotation_rows": 18082,
+  "unique_images": 18082,
+  "unique_tweets": 16058,
+  "rows_with_valid_image_damage": 3526,
+  "rows_without_image_damage_nan": 14455,
+  "rows_with_dont_know_cant_judge": 101,
+  "image_damage_value_counts_raw": {
+    "nan": 14455,
+    "severe_damage": 2212,
+    "mild_damage": 839,
+    "little_or_no_damage": 475,
+    "dont_know_or_cant_judge": 101
+  },
+  "unlabelled_rows_profile": {
+    "total": 14556,
+    "with_text": 14556,
+    "image_info_distribution": {
+      "not_informative": 8708,
+      "informative": 5848
+    },
+    "image_human_distribution": {
+      "not_humanitarian": 8708,
+      "other_relevant_information": 2529,
+      "rescue_volunteering_or_donation_effort": 2231,
+      "affected_individuals": 562,
+      "vehicle_damage": 304,
+      "injured_or_dead_people": 110,
+      "infrastructure_and_utility_damage": 98,
+      "missing_or_found_people": 14
+    },
+    "text_info_distribution": {
+      "informative": 9727,
+      "not_informative": 4829
+    },
+    "text_human_distribution": {
+      "other_relevant_information": 4998,
+      "not_humanitarian": 4829,
+      "rescue_volunteering_or_donation_effort": 3249,
+      "infrastructure_and_utility_damage": 693,
+      "affected_individuals": 367,
+      "injured_or_dead_people": 346,
+      "vehicle_damage": 40,
+      "missing_or_found_people": 34
+    }
+  },
+  "labelled_rows_profile": {
+    "total": 3526,
+    "severity_distribution": {
+      "severe_damage": 2212,
+      "mild_damage": 839,
+      "little_or_no_damage": 475
+    },
+    "image_info_distribution": {
+      "informative": 3526
+    },
+    "image_human_distribution": {
+      "infrastructure_and_utility_damage": 3526
+    },
+    "per_event": {
+      "california_wildfires": 531,
+      "hurricane_harvey": 892,
+      "hurricane_irma": 795,
+      "hurricane_maria": 862,
+      "iraq_iran_earthquake": 173,
+      "mexico_earthquake": 178,
+      "srilanka_floods": 95
+    }
+  },
+  "damage_labelled_rows_current_filter": 3526,
+  "damage_labelled_rows_outside_current_filter": {},
+  "outside_current_filter_severity": {},
+  "images_annotated_more_than_once": 0,
+  "max_annotations_per_image": 1,
+  "images_with_conflicting_damage_labels": 0
+}

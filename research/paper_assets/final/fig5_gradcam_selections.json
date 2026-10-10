@@ -1,0 +1,29 @@
+[
+  {
+    "true_class": "Little/No Damage",
+    "predicted_class": "Little/No Damage",
+    "confidence_pct": 100.0,
+    "image_path": "data_image/hurricane_harvey/27_8_2017/901688029521334272_2.jpg",
+    "test_row_index": 53,
+    "target_layer": "EfficientNet-B0.features.8 (Conv2d)",
+    "checkpoint": "final_exp/F4_generic_wce_bal_n0.0_s42/best.pth"
+  },
+  {
+    "true_class": "Mild Damage",
+    "predicted_class": "Mild Damage",
+    "confidence_pct": 94.06,
+    "image_path": "data_image/hurricane_harvey/27_8_2017/901650894151979008_0.jpg",
+    "test_row_index": 50,
+    "target_layer": "EfficientNet-B0.features.8 (Conv2d)",
+    "checkpoint": "final_exp/F4_generic_wce_bal_n0.0_s42/best.pth"
+  },
+  {
+    "true_class": "Severe Damage",
+    "predicted_class": "Severe Damage",
+    "confidence_pct": 99.93,
+    "image_path": "data_image/california_wildfires/10_10_2017/917792930315821057_0.jpg",
+    "test_row_index": 0,
+    "target_layer": "EfficientNet-B0.features.8 (Conv2d)",
+    "checkpoint": "final_exp/F4_generic_wce_bal_n0.0_s42/best.pth"
+  }
+]

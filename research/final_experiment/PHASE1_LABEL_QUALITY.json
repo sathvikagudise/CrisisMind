@@ -1,0 +1,31 @@
+{
+  "n_kept": 3105,
+  "split_sizes": {
+    "train": 2209,
+    "val": 460,
+    "test": 436
+  },
+  "human_review_counts": {
+    "total_flagged": 2349,
+    "tier1_score>=4": 1079,
+    "tier2_score_2_3": 706,
+    "tier3_score_1": 564,
+    "flagged_in_test": 328
+  },
+  "severe_text_contradiction_candidates": 21,
+  "expansion_candidates": {
+    "infrastructure_no_severity": 0,
+    "cant_judge": 101,
+    "total": 101
+  },
+  "reclaim_analysis": {
+    "rule_h_total": 313,
+    "safe_for_train_only": 312,
+    "unsafe_near_dup_or_missing": 1,
+    "reclaim_class_distribution": {
+      "severe_damage": 132,
+      "mild_damage": 120,
+      "little_or_no_damage": 60
+    }
+  }
+}

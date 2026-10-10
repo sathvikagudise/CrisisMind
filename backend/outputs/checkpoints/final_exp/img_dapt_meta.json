@@ -1,0 +1,5 @@
+{
+  "best_epoch": 4,
+  "val_f1_macro": 0.49473129869426763,
+  "minutes": 6.9
+}

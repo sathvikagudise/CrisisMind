@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #2563eb;
+  --color-secondary: #0f172a;
+  --color-background: #f8fafc;
+  --color-card: #ffffff;
+  --color-accent: #14b8a6;
+  --color-success: #22c55e;
+  --color-danger: #ef4444;
+  --color-border: #e2e8f0;
+  --font-heading: "Poppins", sans-serif;
+  --font-body: "Inter", sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-background text-secondary font-body antialiased;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+}

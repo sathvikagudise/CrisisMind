@@ -1,0 +1,27 @@
+metric,value
+model,cleaned_v3_wide_wce_g1.0_lr1e-04
+architecture,GatedFusionWide
+dataset,Cleaned CrisisMMD v2.0 severity subset (n=3105)
+split,Leak-free stratified 70/15/15 (Phase 4)
+best_epoch,6
+accuracy,0.5699
+precision_macro,0.5007
+recall_macro,0.5134
+f1_macro,0.4829
+precision_weighted,0.6778
+recall_weighted,0.5699
+f1_weighted,0.5972
+img_gate,0.5579
+txt_gate,0.4177
+precision_little_or_no_damage,0.2951
+recall_little_or_no_damage,0.3000
+f1_little_or_no_damage,0.2975
+precision_mild_damage,0.3367
+recall_mild_damage,0.6408
+f1_mild_damage,0.4415
+precision_severe_damage,0.8702
+recall_severe_damage,0.5993
+f1_severe_damage,0.7098
+test_samples,465
+train_samples,2173
+val_samples,467

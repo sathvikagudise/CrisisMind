@@ -1,0 +1,10 @@
+mode,model,trial,processing_time_ms,note
+TEXT_ONLY,DistilBERT,1,2205.2,cold start included
+TEXT_ONLY,DistilBERT,2,141.39,steady state
+TEXT_ONLY,DistilBERT,3,138.98,steady state
+IMAGE_ONLY,EfficientNet-B0,1,272.28,cold start included
+IMAGE_ONLY,EfficientNet-B0,2,95.25,steady state
+IMAGE_ONLY,EfficientNet-B0,3,89.99,steady state
+MULTIMODAL,GatedFusion v3,1,230.14,steady state
+MULTIMODAL,GatedFusion v3,2,259.54,steady state
+MULTIMODAL,GatedFusion v3,3,221.91,steady state

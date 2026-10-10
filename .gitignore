@@ -1,0 +1,50 @@
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+.pytest_cache/
+
+# ---- Node / frontend ----
+node_modules/
+dist/
+*.tsbuildinfo
+
+# ---- OS / editor junk ----
+.DS_Store
+._*
+Thumbs.db
+desktop.ini
+NUL
+
+# ---- Logs & runtime ----
+*.log
+*.pid
+
+# ---- Large binaries: model weights & datasets ----
+*.pth
+*.pt
+*.pkl
+*.pickle
+*.h5
+*.hdf5
+*.onnx
+*.bin
+*.safetensors
+*.ckpt
+
+# ---- Datasets (kept locally, too large for git) ----
+dataset_analysis/
+research/data_cleaning/contact_sheets/
+
+# ---- Regenerable experiment outputs / caches ----
+backend/outputs/cached_features/
+backend/outputs/explanations/
+backend/outputs/plots/
+backend/outputs/metrics/
+backend/outputs/reports/
+backend/outputs/checkpoints/v2/
+backend/outputs/checkpoints/v3/
+backend/outputs/checkpoints/v3_clean/

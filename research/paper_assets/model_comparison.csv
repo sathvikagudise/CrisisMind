@@ -1,0 +1,7 @@
+model,version,architecture,accuracy,precision_macro,recall_macro,f1_macro,f1_weighted,notes
+ImageBaseline,v1,EfficientNet-B0,0.5841,0.4809,0.5063,0.4869,0.5959,image-only
+TextBaseline,v1,DistilBERT,0.5250,0.4291,0.4817,0.4221,0.5328,text-only
+ConcatFusion,v1,Concat fusion head,0.6371,0.5332,0.5287,0.5302,0.6400,concat multimodal
+GatedFusion,v1,Gated fusion head,0.6352,0.5329,0.5437,0.5375,0.6415,gate collapsed txt=0.014
+GatedFusion,v2,Gated fusion head,0.5841,0.5208,0.5596,0.5256,0.6059,"wce_reg1, gate regularization"
+GatedFusionWide,v3,Gated fusion wide 1024,0.6011,0.5403,0.5576,0.5372,0.6220,BEST wide_wce_g1.0_lr1e-04

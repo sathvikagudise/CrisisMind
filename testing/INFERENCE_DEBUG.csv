@@ -1,0 +1,36 @@
+test,filename,gt_label,predicted,pred_idx,confidence,p0,p1,p2,raw_logits,latency_ms,gate_img,gate_txt,text
+image_only_manual,870283105151668224_1.jpg,severe_damage,Severe Damage,2,53.68,0.1355,0.3277,0.5368,"[[-0.7953661680221558, 0.08749862015247345, 0.5811492204666138]]",95.4,,,
+image_only_manual,901805287958601728_0.jpg,little_or_no_damage,Severe Damage,2,44.8,0.2151,0.3369,0.448,"[[-0.42027536034584045, 0.028283780440688133, 0.31343305110931396]]",70.1,,,
+image_only_manual,901835409440768000_1.jpg,severe_damage,Little or No Damage,0,56.26,0.5626,0.3095,0.1279,"[[0.494874507188797, -0.10287385433912277, -0.9862958192825317]]",67.6,,,
+image_only_manual,905230326359891968_0.jpg,little_or_no_damage,Little or No Damage,0,48.56,0.4856,0.2734,0.2411,"[[0.2692117691040039, -0.30526480078697205, -0.43095502257347107]]",61.0,,,
+image_only_manual,905686913876582401_0.jpg,little_or_no_damage,Severe Damage,2,42.08,0.2748,0.3044,0.4208,"[[-0.3611803948879242, -0.2586827278137207, 0.06502571702003479]]",59.2,,,
+image_only_manual,906664753602457601_0.jpg,little_or_no_damage,Severe Damage,2,49.35,0.1472,0.3593,0.4935,"[[-0.6939364075660706, 0.1982492059469223, 0.5155166983604431]]",56.7,,,
+image_only_manual,907638041661108224_0.jpg,little_or_no_damage,Little or No Damage,0,47.88,0.4788,0.3019,0.2192,"[[0.33863604068756104, -0.12260738760232925, -0.44253093004226685]]",58.7,,,
+image_only_manual,909740728909205504_0.jpg,little_or_no_damage,Little or No Damage,0,39.74,0.3974,0.2922,0.3104,"[[-0.07711383700370789, -0.3847233057022095, -0.32413023710250854]]",58.6,,,
+image_only_manual,909742125662789632_0.jpg,little_or_no_damage,Little or No Damage,0,54.43,0.5443,0.291,0.1647,"[[0.3421153128147125, -0.28390705585479736, -0.8534774780273438]]",62.7,,,
+image_only_manual,910110509852184576_0.jpg,little_or_no_damage,Mild Damage,1,38.28,0.3459,0.3828,0.2713,"[[-0.24717171490192413, -0.1458643078804016, -0.48988592624664307]]",66.3,,,
+image_only_manual,910162829461860352_0.jpg,little_or_no_damage,Severe Damage,2,50.98,0.1797,0.3105,0.5098,"[[-0.46296554803848267, 0.0841410756111145, 0.5800447463989258]]",60.7,,,
+image_only_manual,910559723770040326_1.jpg,severe_damage,Severe Damage,2,43.51,0.1993,0.3656,0.4351,"[[-0.6426311731338501, -0.03610958531498909, 0.13784392178058624]]",61.6,,,
+image_only_manual,910691589034409984_0.jpg,little_or_no_damage,Mild Damage,1,40.34,0.3934,0.4034,0.2032,"[[0.14038875699043274, 0.16569210588932037, -0.5200943946838379]]",65.3,,,
+image_only_manual,920016499473047552_0.jpg,little_or_no_damage,Severe Damage,2,68.55,0.14,0.1746,0.6855,"[[-0.7371476292610168, -0.5164169669151306, 0.8513797521591187]]",61.6,,,
+image_only_manual,920131252602142720_0.jpg,little_or_no_damage,Severe Damage,2,49.04,0.2933,0.2163,0.4904,"[[-0.13262201845645905, -0.43735939264297485, 0.38140156865119934]]",61.8,,,
+multimodal_manual,870283105151668224_1.jpg,severe_damage,Severe Damage,2,67.23,0.0338,0.2939,0.6723,"[[-2.192762851715088, -0.03055543452501297, 0.7968929409980774]]",212.7,0.1473,0.0197,Disaster damage reported in the area
+multimodal_manual,901805287958601728_0.jpg,little_or_no_damage,Severe Damage,2,73.47,0.0509,0.2144,0.7347,"[[-1.6977959871292114, -0.25928571820259094, 0.9722276329994202]]",194.0,0.1499,0.0038,Buildings collapsed after earthquake
+multimodal_manual,901835409440768000_1.jpg,severe_damage,Little or No Damage,0,96.75,0.9675,0.0318,0.0007,"[[3.0143990516662598, -0.39962151646614075, -4.259442329406738]]",189.1,0.2606,0.0083,Minor flooding on residential streets
+multimodal_manual,905230326359891968_0.jpg,little_or_no_damage,Severe Damage,2,54.66,0.1515,0.3019,0.5466,"[[-0.9687809944152832, -0.27886763215065, 0.31465283036231995]]",205.7,0.1073,0.0309,Disaster damage reported in the area
+multimodal_manual,905686913876582401_0.jpg,little_or_no_damage,Severe Damage,2,55.45,0.1358,0.3096,0.5545,"[[-1.2453196048736572, -0.42152124643325806, 0.16127988696098328]]",198.3,0.2058,0.006,Buildings collapsed after earthquake
+text_only_manual,,Little or No Damage,Severe Damage,2,37.88,0.2716,0.3496,0.3788,"[[-0.22477075457572937, 0.027612488716840744, 0.10791319608688354]]",130.5,,,The road has a few visible cracks but traffic is normal.
+text_only_manual,,Little or No Damage,Severe Damage,2,37.65,0.2923,0.3312,0.3765,"[[-0.1805315762758255, -0.05547101050615311, 0.07267049700021744]]",128.0,,,Some tree branches fell on the lawn but the house is intact.
+text_only_manual,,Little or No Damage,Severe Damage,2,42.53,0.2667,0.3081,0.4253,"[[-0.2151615023612976, -0.07092688977718353, 0.25152722001075745]]",133.2,,,Light rain caused minor puddles on the street.
+text_only_manual,,Little or No Damage,Mild Damage,1,34.63,0.3355,0.3463,0.3182,"[[-0.059939756989479065, -0.028290389105677605, -0.11268509179353714]]",133.0,,,A few roof tiles shifted slightly during the storm.
+text_only_manual,,Little or No Damage,Severe Damage,2,42.7,0.252,0.321,0.427,"[[-0.29857057332992554, -0.05640711635351181, 0.22883066534996033]]",129.1,,,The fence has some minor scratches from wind-blown debris.
+text_only_manual,,Mild Damage,Severe Damage,2,49.12,0.2175,0.2912,0.4912,"[[-0.38845381140708923, -0.09658177196979523, 0.4261537790298462]]",126.4,,,Several buildings have broken windows and partial wall damage.
+text_only_manual,,Mild Damage,Severe Damage,2,51.86,0.2223,0.2591,0.5186,"[[-0.3404284417629242, -0.18731458485126495, 0.5068239569664001]]",132.4,,,Floodwater has entered the ground floor of the apartment complex.
+text_only_manual,,Mild Damage,Severe Damage,2,42.38,0.2516,0.3246,0.4238,"[[-0.2388087660074234, 0.015990639105439186, 0.28270089626312256]]",130.0,,,The church roof collapsed partially due to heavy snow load.
+text_only_manual,,Mild Damage,Severe Damage,2,43.03,0.2615,0.3081,0.4303,"[[-0.24003958702087402, -0.07599344849586487, 0.25796952843666077]]",128.1,,,Moderate cracks in the retaining wall along the highway.
+text_only_manual,,Mild Damage,Severe Damage,2,34.73,0.3231,0.3296,0.3473,"[[-0.1140613853931427, -0.09437050670385361, -0.041951652616262436]]",124.1,,,Three vehicles damaged by falling tree branches after the storm.
+text_only_manual,,Severe Damage,Severe Damage,2,57.34,0.1572,0.2694,0.5734,"[[-0.703702449798584, -0.1649884432554245, 0.5903845429420471]]",139.2,,,Multiple buildings have collapsed and rescue teams are evacuating people.
+text_only_manual,,Severe Damage,Severe Damage,2,58.45,0.1655,0.25,0.5845,"[[-0.5909984707832336, -0.17841731011867523, 0.6709723472595215]]",132.3,,,Entire neighbourhood destroyed by the wildfire leaving only ashes.
+text_only_manual,,Severe Damage,Severe Damage,2,46.63,0.217,0.3166,0.4663,"[[-0.4529532194137573, -0.07533705979585648, 0.3118298053741455]]",128.1,,,The hospital has severe structural damage and is being evacuated.
+text_only_manual,,Severe Damage,Severe Damage,2,50.82,0.2317,0.2601,0.5082,"[[-0.3046908676624298, -0.18906313180923462, 0.4807492196559906]]",127.7,,,Hundreds of homes washed away by the catastrophic flood waters.
+text_only_manual,,Severe Damage,Severe Damage,2,60.76,0.1481,0.2442,0.6076,"[[-0.6609731316566467, -0.1608075499534607, 0.7506223917007446]]",129.0,,,Major earthquake has reduced the city center to complete rubble.

@@ -1,0 +1,24 @@
+parameter,value,notes
+architecture,GatedFusionWide,"1024 hidden + BatchNorm, 3.1M trainable params"
+image_encoder,EfficientNet-B0,pretrained ImageNet, 1280-d features
+text_encoder,DistilBERT,768-d features
+fusion_input_dim,2048,"1280 (image) + 768 (text)"
+gate_network,"2048 -> 256 -> 2","with dropout"
+loss,Weighted Cross-Entropy,inverse frequency (normalized)
+class_weights,inverse frequency normalized,"little:1.6831 mild:0.9548 severe:0.3621 (computed from feature cache)"
+gate_reg_weight,1.0,gate regularization target 0.5
+learning_rate,1e-4,AdamW
+weight_decay,1e-4,AdamW
+scheduler,warmup_cosine,5 epoch warmup
+optimizer,AdamW,-
+max_epochs,40,early stopping
+patience,10,epochs
+best_epoch,6,val macro F1
+batch_size,32,training loader
+validation_batch_size,64,-
+test_batch_size,64,-
+feature_noise,0.0,dropout-based noise injection
+dropout,0.3,model dropout
+random_seed,42,-
+train_val_test_split,0.70/0.15/0.15,stratified
+device,cpu,no CUDA available

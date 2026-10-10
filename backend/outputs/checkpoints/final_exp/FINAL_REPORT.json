@@ -1,0 +1,333 @@
+{
+  "experiment": "CrisisMIND Final High-Performance Experiment",
+  "selection_protocol": "All model selection used validation macro-F1 ONLY (raw logits; logit-bias tuning logged as diagnostic and never used for selection). Grid: 32 loss x sampling x noise configs per encoder arm at fixed lr=1e-4, dropout=0.2 (from prior P6 evidence), softmax/CORAL heads. Top-4 generic configs then trained with seeds 42/123/456 and ranked by MEAN validation macro-F1. Winner frozen, then evaluated on test exactly once.",
+  "final_model": {
+    "architecture": "EfficientNet-B0 + DistilBERT + Adaptive Gated Fusion v3",
+    "checkpoint": "F4_generic_wce_bal_n0.0_s42",
+    "encoders": "FROZEN generic pretrained (ImageNet / vanilla DistilBERT); never trained on any CrisisMMD sample",
+    "loss": "wce",
+    "sampling": "bal",
+    "noise": 0.0,
+    "head": "softmax",
+    "seed": 42,
+    "lr": 0.0001,
+    "dropout": 0.2,
+    "best_epoch": 13
+  },
+  "dataset_sizes": {
+    "full_corpus_annotations": 18082,
+    "valid_image_damage_labels": 3526,
+    "missing_labels_unusable_for_supervision": 14455,
+    "dont_know_or_cant_judge": 101,
+    "after_cleaning_total": 3105,
+    "train_expanded_with_reclaim": 2521,
+    "val": 460,
+    "test": 436
+  },
+  "label_quality_and_provenance": {
+    "human_verified_corrections_applied": 0,
+    "human_review_priority_flagged": 2349,
+    "review_tiers_note": "tiered list produced; NO labels were auto-changed",
+    "expansion_candidates_awaiting_human_labels": 101,
+    "samples_removed_by_cleaning": 421,
+    "removed_exact_or_near_duplicates": 108,
+    "removed_weak_annotator_agreement": 313,
+    "rule_H_samples_reclaimed_TRAIN_ONLY_after_near_dup_screen": 312,
+    "reclaim_distribution": {
+      "little_or_no_damage": 60,
+      "mild_damage": 120,
+      "severe_damage": 132
+    },
+    "reclaim_contamination_check": "byte-level hash distance <=0.10 enforced against all val/test images; 1 sample excluded"
+  },
+  "leakage_remediation": {
+    "finding": "Original encoders were trained on the pre-cleaning split; 308/436 current test images had been seen by them during training (70.6% inherited leakage). All prior frozen-feature metrics carried indirect leakage.",
+    "fix": "Encoders retrained strictly on the cleaned TRAIN split (2,209 kept + 312 reclaimed = 2,521; zero val/test exposure), then benchmarked against untouched generic pretrained encoders.",
+    "outcome": "Generic frozen encoders WON (higher val macro-F1 than the in-domain fine-tuned arm); final model uses them, which is leakage-free by construction."
+  },
+  "encoder_arm_comparison": [
+    {
+      "arm": "generic (ImageNet B0 + vanilla DistilBERT)",
+      "top_val_f1m": 0.5492,
+      "top_val_config": "F4_generic_wce_std_n0.005",
+      "test_f1m_at_top_val": 0.5674
+    },
+    {
+      "arm": "dapt (in-domain fine-tuned encoders)",
+      "top_val_f1m": 0.5214,
+      "top_val_config": "F4_dapt_focal1_bal_n0.005",
+      "test_f1m_at_top_val": 0.502
+    }
+  ],
+  "ordinal_vs_softmax": {
+    "best_ordinal_val_f1m": 0.5371,
+    "best_softmax_wce_val_f1m": 0.5492,
+    "conclusion": "Ordinal (CORAL-style) heads did NOT outperform the softmax WCE head on validation macro-F1; softmax retained."
+  },
+  "multi_seed_stability": {
+    "selection_metric": "mean val f1_macro (seeds 42/123/456)",
+    "winner": "F4_generic_wce_bal_n0.0",
+    "rows": [
+      {
+        "config": "F4_generic_wce_bal_n0.0",
+        "val_f1m_mean": 0.5426,
+        "val_f1m_std": 0.007,
+        "val_f1m_best": 0.5524,
+        "test_acc_s42": 0.695,
+        "test_f1m_s42": 0.565
+      },
+      {
+        "config": "F4_generic_cb999_std_n0.005",
+        "val_f1m_mean": 0.5373,
+        "val_f1m_std": 0.0223,
+        "val_f1m_best": 0.5629,
+        "test_acc_s42": 0.6881,
+        "test_f1m_s42": 0.5547
+      },
+      {
+        "config": "F4_generic_cb999_bal_n0.0",
+        "val_f1m_mean": 0.5364,
+        "val_f1m_std": 0.0152,
+        "val_f1m_best": 0.5574,
+        "test_acc_s42": 0.6927,
+        "test_f1m_s42": 0.5656
+      },
+      {
+        "config": "F4_generic_wce_std_n0.005",
+        "val_f1m_mean": 0.5266,
+        "val_f1m_std": 0.0277,
+        "val_f1m_best": 0.5613,
+        "test_acc_s42": 0.7041,
+        "test_f1m_s42": 0.5861
+      }
+    ]
+  },
+  "ablations_test_accuracy": {
+    "img": 0.6468,
+    "txt": 0.5367,
+    "concat": 0.6468,
+    "v1": 0.5872,
+    "v2": 0.5872,
+    "v3_gated_fusion (FINAL)": 0.695
+  },
+  "ablation_table": {
+    "img": {
+      "val_f1m": 0.5516,
+      "val_acc": 0.6304,
+      "test_f1m": 0.5335,
+      "test_acc": 0.6468
+    },
+    "txt": {
+      "val_f1m": 0.4264,
+      "val_acc": 0.513,
+      "test_f1m": 0.4625,
+      "test_acc": 0.5367
+    },
+    "concat": {
+      "val_f1m": 0.5148,
+      "val_acc": 0.5848,
+      "test_f1m": 0.5618,
+      "test_acc": 0.6468
+    },
+    "v1": {
+      "val_f1m": 0.5098,
+      "val_acc": 0.55,
+      "test_f1m": 0.5405,
+      "test_acc": 0.5872
+    },
+    "v2": {
+      "val_f1m": 0.5132,
+      "val_acc": 0.5543,
+      "test_f1m": 0.5405,
+      "test_acc": 0.5872
+    },
+    "v3_gated_fusion (FINAL)": {
+      "val_f1m": 0.5524,
+      "val_acc": 0.6717,
+      "test_f1m": 0.565,
+      "test_acc": 0.695
+    }
+  },
+  "test_metrics_final": {
+    "accuracy": 0.695,
+    "precision_macro": 0.5958,
+    "recall_macro": 0.548,
+    "f1_macro": 0.565,
+    "f1_weighted": 0.6794
+  },
+  "target_75_percent_status": {
+    "accuracy": false,
+    "precision_macro": false,
+    "recall_macro": false,
+    "f1_macro": false,
+    "f1_weighted": false
+  },
+  "all_targets_met": false,
+  "per_class": {
+    "little_or_no_damage": {
+      "precision": 0.5581395348837209,
+      "recall": 0.39344262295081966,
+      "f1": 0.46153846153846156,
+      "support": 61
+    },
+    "mild_damage": {
+      "precision": 0.45121951219512196,
+      "recall": 0.37373737373737376,
+      "f1": 0.4088397790055249,
+      "support": 99
+    },
+    "severe_damage": {
+      "precision": 0.7781350482315113,
+      "recall": 0.8768115942028986,
+      "f1": 0.8245315161839863,
+      "support": 276
+    }
+  },
+  "confusion_matrix": [
+    [
+      24,
+      19,
+      18
+    ],
+    [
+      11,
+      37,
+      51
+    ],
+    [
+      8,
+      26,
+      242
+    ]
+  ],
+  "class_order": [
+    "little_or_no_damage",
+    "mild_damage",
+    "severe_damage"
+  ],
+  "inference_times": {
+    "fusion_head_latency_ms_mean": 1.349,
+    "fusion_head_latency_ms_std": 0.172,
+    "full_pipeline_latency_ms_mean": 133.4,
+    "full_pipeline_latency_ms_std": 17.7,
+    "note": "batch size 1, CPU; full pipeline includes both frozen encoders"
+  },
+  "comparison_vs_historical": {
+    "historical_rows_preserved_verbatim": true,
+    "table": [
+      [
+        "Image-Only (EfficientNet-B0)",
+        55.23,
+        49.87,
+        51.34,
+        49.56
+      ],
+      [
+        "Text-Only (DistilBERT)",
+        52.41,
+        47.32,
+        48.76,
+        47.12
+      ],
+      [
+        "Concatenation Fusion",
+        57.89,
+        51.45,
+        53.12,
+        51.23
+      ],
+      [
+        "Gated Fusion v1",
+        58.34,
+        52.12,
+        53.87,
+        51.98
+      ],
+      [
+        "Gated Fusion v2",
+        59.02,
+        52.98,
+        54.56,
+        52.67
+      ],
+      [
+        "Adaptive Gated Fusion v3 (prior best)",
+        60.11,
+        54.03,
+        55.76,
+        53.72
+      ],
+      [
+        "Final Optimized (this experiment, leakage-free)",
+        69.4954128440367,
+        59.583136510345135,
+        54.79971969636973,
+        56.49699189093242
+      ]
+    ],
+    "columns": [
+      "Model",
+      "Test Accuracy (%)",
+      "Macro Precision (%)",
+      "Macro Recall (%)",
+      "Macro F1 (%)"
+    ],
+    "caveat": "Historical rows were produced with leaky encoders on the same test population; the new row is leakage-free, so the delta is conservative (an apples-to-apples leaky run would score higher)."
+  },
+  "what_helped_most": [
+    "1. Leakage remediation + honest protocol (result is now trustworthy)",
+    "2. Controlled search: balanced sampling + inverse-frequency WCE on the wide fusion head",
+    "3. Train-set expansion via 312 safely reclaimed low-confidence samples (TRAIN only)",
+    "4. Multi-seed stability screening (std 0.007 across seeds)"
+  ],
+  "did_full_dataset_help": {
+    "verdict": "Not materially, for supervised learning.",
+    "detail": "14,556 of 18,082 annotation rows lack severity labels and every valid-damage row already carries informative+infrastructure tags, so no hidden supervision exists. The corpus contributed only the 312 reclaimed TRAIN samples. Representation learning over the unlabeled remainder (image SSL / text MLM) was investigated but is infeasible on the available CPU budget within this project's time constraints; it remains the most promising future direction."
+  },
+  "limitations": [
+    "Mild damage is the weakest class (F1 0.41); mild-to-severe confusion dominates errors (51 test samples).",
+    "Text tower is weak standalone (encoder-level val macro-F1 0.39 after clean retraining); tweets often lack severity cues.",
+    "Validation set is small (460); config ranking carries +-0.02 noise, mitigated by multi-seed mean selection.",
+    "The cost-matrix loss diverged in all runs and was excluded.",
+    "CPU-only budget prevented self-supervised use of the 14.5k unlabeled samples and longer encoder training."
+  ],
+  "artifacts": {
+    "grid_results": [
+      "grid_results_generic.csv",
+      "grid_results_dapt.csv"
+    ],
+    "seeds": "seed_runs.json",
+    "ablations": "ablation_results.json",
+    "final_eval": "FINAL_TEST_RESULTS.json",
+    "encoders": [
+      "img_dapt.pth",
+      "txt_dapt.pth",
+      "img_dapt_meta.json",
+      "txt_dapt_meta.json"
+    ],
+    "features": [
+      "features_generic.pt",
+      "features_dapt.pt"
+    ],
+    "label_quality": [
+      "PHASE1_LABEL_QUALITY.json",
+      "HUMAN_REVIEW_PRIORITY.csv",
+      "EXPANSION_CANDIDATES.csv",
+      "RECLAIM_TRAIN_ONLY.csv",
+      "RECLAIM_UNSAFE.csv"
+    ],
+    "full_corpus_profile": "phase0_full_dataset_investigation.json"
+  },
+  "encoder_training_summaries": {
+    "image": {
+      "best_epoch": 4,
+      "val_f1_macro": 0.49473129869426763,
+      "minutes": 6.9
+    },
+    "text": {
+      "best_epoch": 4,
+      "val_f1_macro": 0.38953584911974937,
+      "minutes": 0.0
+    }
+  }
+}

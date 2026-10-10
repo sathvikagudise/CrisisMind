@@ -1,0 +1,31 @@
+CrisisMind Classification Report — Multimodal Gated Fusion
+==========================================================
+Generated: July 28, 2026
+Test Set: 529 samples (71 Little, 126 Mild, 332 Severe)
+
+                    precision    recall  f1-score   support
+
+Little or No Damage     0.40      0.44      0.42        71
+        Mild Damage     0.41      0.44      0.42       126
+      Severe Damage     0.80      0.75      0.77       332
+
+          accuracy                         0.64       529
+         macro avg     0.53      0.54      0.54       529
+      weighted avg     0.65      0.64      0.64       529
+
+==========================================================
+
+Confusion Matrix:
+                             Pred Little  Pred Mild  Pred Severe
+Actual Little or No Damage       31        26          14
+Actual Mild Damage               20        56          50
+Actual Severe Damage             27        56         249
+
+==========================================================
+
+Notes:
+- 62.8% of test data is Severe Damage (class imbalance)
+- Majority-class baseline accuracy: 62.7%
+- Gated Fusion accuracy: 63.5% (+0.8% above baseline)
+- Severe class recall (75%) significantly better than Little (44%) and Mild (44%)
+- Gate values: img≈0.17, txt≈0.014 (both near zero, text effectively ignored)

@@ -1,0 +1,37 @@
+{
+  "name": "F4_generic_cb999_std_n0.005_s42",
+  "loss": "cb999",
+  "sampling": "std",
+  "noise": 0.005,
+  "head": "softmax",
+  "seed": 42,
+  "lr": 0.0001,
+  "dropout": 0.2,
+  "best_epoch": 20,
+  "val": {
+    "accuracy": 0.6804347826086956,
+    "precision_macro": 0.5669898086005468,
+    "recall_macro": 0.5599091985787604,
+    "f1_macro": 0.5629240887453534,
+    "precision_weighted": 0.6809178743961354,
+    "recall_weighted": 0.6804347826086956,
+    "f1_weighted": 0.6804380516508663
+  },
+  "test": {
+    "accuracy": 0.6880733944954128,
+    "precision_macro": 0.5806982609849993,
+    "recall_macro": 0.5401172571521823,
+    "f1_macro": 0.5547286677494675,
+    "precision_weighted": 0.6653151820065107,
+    "recall_weighted": 0.6880733944954128,
+    "f1_weighted": 0.6725843656822009
+  },
+  "val_f1m_bias_tuned": 0.5629240887453534,
+  "val_biases": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "test_f1m_if_valbiases_applied": 0.5547286677494675,
+  "test_acc_if_valbiases_applied": 0.6880733944954128
+}
