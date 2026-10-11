@@ -35,7 +35,10 @@ NUL
 *.safetensors
 *.ckpt
 
-# ---- Deployed checkpoints (kept locally; see DEPLOY notes for hosting) ----
+# ---- Deployed checkpoints required by the API (tracked via Git LFS) ----
+!backend/outputs/checkpoints/best_model.pth
+!backend/outputs/checkpoints/best_text_model.pth
+!backend/outputs/checkpoints/final_exp/F4_generic_wce_bal_n0.0_s42/best.pth
 
 # ---- Datasets (kept locally, too large for git) ----
 dataset_analysis/
