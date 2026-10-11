@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: crisismind-backend
+    runtime: docker
+    plan: standard          # DistilBERT + EfficientNet + PyTorch need >= 2 GB RAM
+    region: oregon          # change if you prefer another region
+    dockerfilePath: ./backend/Dockerfile
+    dockerContext: .
+    healthCheckPath: /health
+    autoDeploy: true
+
+  - type: web
+    name: crisismind-frontend   # optional: you can use Vercel instead
+    runtime: static
+    rootDir: frontend
+    buildCommand: npm ci && npm run build
+    staticPublishPath: ./dist
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html

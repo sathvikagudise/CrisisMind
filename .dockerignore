@@ -1,0 +1,19 @@
+# Keep the build context small. Do NOT ignore .git — the Dockerfile runs
+# `git lfs pull` to materialise the deployed checkpoints.
+**/.venv
+**/node_modules
+frontend/dist
+dataset_analysis
+research/data_cleaning/contact_sheets
+backend/outputs/cached_features
+backend/outputs/explanations
+backend/outputs/plots
+backend/outputs/metrics
+backend/outputs/reports
+backend/outputs/checkpoints/v2
+backend/outputs/checkpoints/v3
+backend/outputs/checkpoints/v3_clean
+**/__pycache__
+**/*.pyc
+**/*.log
+.gitignore

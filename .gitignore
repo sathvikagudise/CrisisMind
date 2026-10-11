@@ -35,6 +35,8 @@ NUL
 *.safetensors
 *.ckpt
 
+# ---- Deployed checkpoints (kept locally; see DEPLOY notes for hosting) ----
+
 # ---- Datasets (kept locally, too large for git) ----
 dataset_analysis/
 research/data_cleaning/contact_sheets/
