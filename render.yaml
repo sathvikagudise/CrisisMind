@@ -8,14 +8,3 @@ services:
     dockerContext: .
     healthCheckPath: /health
     autoDeploy: true
-
-  - type: web
-    name: crisismind-frontend   # optional: you can use Vercel instead
-    runtime: static
-    rootDir: frontend
-    buildCommand: npm ci && npm run build
-    staticPublishPath: ./dist
-    routes:
-      - type: rewrite
-        source: /*
-        destination: /index.html
